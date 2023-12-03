@@ -23,7 +23,7 @@ const INITIAL_STATE = {
 
 const AuthContext = createContext<IContextType>(INITIAL_STATE);
 
-const AuthProvider =({children}: {children: React.ReactNode})=> {
+export function AuthProvider({children}: {children: React.ReactNode}) {
   
     const [user, setUser] = useState<IUser>(INITIAL_USER)
     const [isLoading, setIsLoading] = useState(false);
@@ -85,4 +85,4 @@ const AuthProvider =({children}: {children: React.ReactNode})=> {
 }
 
 export const useUserContext = ()=> useContext(AuthContext)
-export default AuthProvider
+// export default AuthProvider
