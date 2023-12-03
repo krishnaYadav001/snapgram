@@ -6,6 +6,11 @@ import { Home } from './_root/pages';
 import './globals.css';
 import {Routes, Route} from 'react-router-dom';
 
+import { Toaster } from "@/components/ui/toaster"
+
+
+
+
 function App() {
   return (
     <main className='flex h-screen'>
@@ -21,6 +26,7 @@ function App() {
                 <Route index element={<Home/>}/>
             </Route>
         </Routes>
+        <Toaster/>
     </main>
   )
 }
