@@ -47,7 +47,7 @@ function SignupForm() {
     if(!newUser){
       return toast({
         title: ' Sign up failed. please try again.'
-      });
+      })
     }
     const session = await signInAccount({
       email: values.email,
@@ -55,12 +55,12 @@ function SignupForm() {
     })
 
     if(!session){
-      return toast({title: 'Sign in failed. please try again'})
+      return toast({title: 'Sign up failed. Please try again.'})
     }
 
     const isLoggedIn= await checkAuthUser();
     if(isLoggedIn){
-    form.reset();
+    form.reset()
     navigate('/')
   }else{
     return  toast({ title: 'Sign up failed. Please try again.'})
